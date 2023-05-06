@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import styled from "styled-components";
@@ -62,7 +63,7 @@ function Sort({ countries, onSort }: Props) {
     if (countries.length > 0 && searchParams.get("sort")) {
       sort(searchParams.get("sort")!);
     }
-  });
+  }, []);
 
   const sort = (type: string) => {
     setSortBy(type);

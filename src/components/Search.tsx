@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import {  useSearchParams } from "react-router-dom";
 import styled from "styled-components";
@@ -49,7 +50,7 @@ function Search({ countries, onSearch }: Props) {
     if (countries.length > 0) {
       handleSearch(searchParams.get("query") || "");
     }
-  });
+  }, []);
 
   const handleSearch = (input: string): void => {
     setsearchTerm(input);

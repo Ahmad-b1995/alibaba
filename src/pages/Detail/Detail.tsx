@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import styled from "styled-components";
@@ -102,7 +103,7 @@ function Detail() {
     getCountryByName(name!).then((countries: any) => {
       setCountry(countries.data[0]);
     });
-  });
+  }, []);
 
   return (
     <>

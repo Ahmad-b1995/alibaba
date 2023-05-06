@@ -102,7 +102,7 @@ function Detail() {
     getCountryByName(name!).then((countries: any) => {
       setCountry(countries.data[0]);
     });
-  }, []);
+  });
 
   return (
     <>

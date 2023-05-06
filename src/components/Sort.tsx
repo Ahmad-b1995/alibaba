@@ -62,7 +62,7 @@ function Sort({ countries, onSort }: Props) {
     if (countries.length > 0 && searchParams.get("sort")) {
       sort(searchParams.get("sort")!);
     }
-  }, []);
+  });
 
   const sort = (type: string) => {
     setSortBy(type);

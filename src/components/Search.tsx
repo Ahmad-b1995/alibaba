@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import {  useSearchParams } from "react-router-dom";
 import styled from "styled-components";
 import { Country } from "../types";
 import { FaSearch } from "react-icons/fa";
@@ -49,7 +49,7 @@ function Search({ countries, onSearch }: Props) {
     if (countries.length > 0) {
       handleSearch(searchParams.get("query") || "");
     }
-  }, []);
+  });
 
   const handleSearch = (input: string): void => {
     setsearchTerm(input);

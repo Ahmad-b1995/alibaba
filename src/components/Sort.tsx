@@ -84,15 +84,6 @@ function Sort({ countries, onSort }: Props) {
   };
 
   return (
-    // <select
-    //   name="sort"
-    //   id="sort"
-    //   value={sortBy}
-    //   onChange={(event) => sort(event.target.value)}
-    // >
-    //   <option value="name">name</option>
-    //   <option value="population">population</option>
-    // </select>
     <DropDown>
       <Select onClick={() => setdropDown((dropDown) => !dropDown)}>
         {sortBy}

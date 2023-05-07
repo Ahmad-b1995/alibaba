@@ -52,7 +52,7 @@ function Homepage() {
               countries={allCountries}
               onSearch={(countries) => setcountries(countries)}
             />
-            {countries.length && (
+            {countries.length > 0 && (
               <Sort
                 countries={countries}
                 onSort={(countries) => setcountries(countries)}

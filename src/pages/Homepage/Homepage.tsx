@@ -59,11 +59,15 @@ function Homepage() {
               />
             )}
           </Toolbar>
-          <Grid>
-            {countries.map((country: Country) => (
-              <Card key={country.name} country={country} />
-            ))}
-          </Grid>
+          {countries.length ? (
+            <Grid>
+              {countries.map((country: Country) => (
+                <Card key={country.name} country={country} />
+              ))}
+            </Grid>
+          ) : (
+            "No results found!"
+          )}
         </>
       )}
     </>

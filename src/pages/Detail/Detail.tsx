@@ -29,7 +29,7 @@ const BackBtn = styled.button`
 const Content = styled.div`
   display: flex;
   gap: 7rem;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   color: ${(props: any) => props.theme.text};
   @media (max-width: ${992}px) {

@@ -21,6 +21,12 @@ const HeaderContent = styled.div`
   justify-content: space-between;
   width: 85%;
   max-width: 1440px;
+  h1 {
+    font-size: 25px;
+    @media (max-width: ${768}px) {
+      font-size: 20px;
+    }
+  }
 `;
 
 const Theme = styled.div`
@@ -29,6 +35,7 @@ const Theme = styled.div`
   justify-content: space-between;
   gap: 0.6rem;
   cursor: pointer;
+  font-size: 14px;
 `;
 
 interface Props {

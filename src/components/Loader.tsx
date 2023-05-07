@@ -8,7 +8,6 @@ const loadingAnimation = keyframes`
 const Loading = styled.div`
   position: absolute;
   top: calc(50% - 50px);
-  left: calc(50% - 50px);
   border: 8px solid #f3f3f3;
   border-top: 8px solid #1d3648;
   border-radius: 50%;
@@ -17,6 +16,12 @@ const Loading = styled.div`
   animation-name: ${loadingAnimation};
   animation-duration: 1.5s;
   animation-iteration-count: infinite;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
 `;
 
 function Loader() {

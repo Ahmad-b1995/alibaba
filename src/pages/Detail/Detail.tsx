@@ -84,14 +84,15 @@ const BorderCountriesContainer = styled.div`
 `;
 
 const BorderCountries = styled.div`
-  display: flex;
   margin-top: 1rem;
+  width: 100%;
 `;
 
 const Border = styled.div`
   box-shadow: ${(props: any) => props.theme.shadow} 0px 1px 10px 0px;
-  margin: 0 0.5rem;
+  margin: 0.5rem;
   padding: 0.2rem 0.5rem;
+  display: inline-block
 `;
 
 function Detail() {

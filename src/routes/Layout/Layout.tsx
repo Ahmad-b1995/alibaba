@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import GlobalStyles from "../../assets/styles/globalStyles";
 import { dark, light } from "../../assets/styles/theme";
@@ -17,10 +17,21 @@ const Content = styled.div`
 function Layout({ children }: Props) {
   const [theme, setTheme] = useState("light");
 
+  useEffect(() => {
+    let theme = localStorage.getItem("theme");
+    if (!theme) return;
+    setTheme('dark');
+  }, []);
+
+  const toggleTheme = (theme: string) => {
+    setTheme(theme);
+    localStorage.setItem("theme", theme);
+  };
+
   return (
     <ThemeProvider theme={theme === "light" ? light : dark}>
       <GlobalStyles />
-      <Header changeTheme={(theme: string) => setTheme(theme)} />
+      <Header changeTheme={toggleTheme} />
       <Content>{children}</Content>
     </ThemeProvider>
   );

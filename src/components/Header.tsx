@@ -45,6 +45,7 @@ interface Props {
 function Header({ changeTheme }: Props) {
   const [theme, setTheme] = useState("light");
 
+  
   const toggleTheme = () => {
     setTheme((theme) => (theme === "light" ? "dark" : "light"));
     changeTheme(theme);

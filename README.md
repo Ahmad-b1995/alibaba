@@ -13,6 +13,7 @@ Alibaba code challenge with these features:
 - styles are loaded when their components are asked for
 - App is dockerized and is run using NginX
 - Two docker files are present: 1) for development 2) for production
+- theme change is saved in localStorage and is set on app startup
 
 The app can be viewed here:
 
